@@ -1,5 +1,6 @@
 
 Created a Header Component and Card component to display the teams data using props.
-![image](https://user-images.githubusercontent.com/76955371/205437314-1648a3b5-ac33-4179-a852-cb604d64baac.png)
+![Team-data](https://user-images.githubusercontent.com/76955371/205437337-1c9a124a-065a-428d-a22a-71502985051a.png)
+
 
 
