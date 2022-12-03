@@ -9,7 +9,7 @@ import React from 'react';
         <h2>Name:{name}</h2>
         <h3>Place:{location}</h3>
         <h3>Company:{companyOrCollege}</h3>
-        <h4>Designation:{experienceOrSemester}</h4>
+        <h4>Experience:{experienceOrSemester}</h4>
         </div>
     )
 } 
