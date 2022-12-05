@@ -1,0 +1,29 @@
+body{
+    margin:0px;
+}
+#class-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#card{
+    width: 25%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin:20px;
+}
+
+#card img{
+    width: -webkit-fill-available;
+}
+
+#header h1{
+    color: #fff;
+    margin: 0px;
+    padding: 10px;
+}
+
+#header{
+    background-color: black;
+}
