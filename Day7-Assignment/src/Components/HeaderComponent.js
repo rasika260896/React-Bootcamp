@@ -9,7 +9,6 @@ const HeaderComponent = () =>{
         <p><Link to ='/'> Home </Link></p>
         <p><Link to="/about-us">About Us</Link></p>
         <p><Link to ='/search'>Search</Link></p>
-
         </div>
         </div>
     )

@@ -15,12 +15,10 @@ async function fetchData(){
     const jsonData =  await data.json();
     //Setting the data from api to local variable userInfo using setUserInfo function
     setUserInfo(jsonData);
-    //console.log(jsonData)
 }
 return(
     //Sending data to CardComponent that is set to userInfo
-    <CardComponent item = {userInfo} />
-    
+    <CardComponent item = {userInfo} />   
 )
 }
 
