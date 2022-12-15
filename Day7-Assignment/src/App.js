@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import HeaderComponent from './Components/HeaderComponent.js'
-import BodyComponent from './Components/BodyComponent.js'
+import HeaderComponent from './components/HeaderComponent.js'
+import BodyComponent from './components/BodyComponent.js'
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
-import ErrorComponent from './Components/ErrorComponent.js'
-import AboutUs from './Components/AboutUs.js'
-import MemberData from './Components/MemberData.js'
+import ErrorComponent from './components/ErrorComponent.js'
+import AboutUs from './components/AboutUs.js'
+import MemberData from './components/MemberData.js'
 
 const App = () => {
 
@@ -26,32 +26,25 @@ const appRouter = createBrowserRouter([
             {
                 path: "/member/:username",
                 element: <MemberData />,
-                errorElement: <ErrorComponent />
+
             },
             {
                 path: "/search",
                 element: <BodyComponent />,
-                errorElement: <ErrorComponent />
+
             },
             {
                 path: "/about-us",
                 element: <AboutUs />,
-                errorElement: <ErrorComponent />
+
             },
 
         ]
 
     },
-   /*  {
-        path: "/about-us",
-        element: <AboutUs />,
-        errorElement: <ErrorComponent />
-    }, */
-
 ])
 
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-//root.render(<App/>);
 root.render(<RouterProvider router={appRouter} />)

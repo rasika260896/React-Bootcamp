@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import CardContainer from './CardContainer';
-import {useState,useEffect} from 'react'
 import SearchBar from './SearchBar';
 
 const BodyComponent = () =>{
