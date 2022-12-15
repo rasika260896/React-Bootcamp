@@ -1,6 +1,4 @@
-import React from 'react'
-import {useState} from 'react'
-
+import React, {useState} from 'react'
 /**
 	 * @description: function is called on Submit of the form, This function describes the functionality of Search
 	 * @param1: searchText : entered search text
