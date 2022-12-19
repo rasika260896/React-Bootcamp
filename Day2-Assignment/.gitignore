@@ -1,0 +1,5 @@
+# folders or file which we should not push to github
+.parcel-cache
+node_modules
+dist
+npm-debug.log*
