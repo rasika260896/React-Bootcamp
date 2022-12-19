@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { lazy,Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import HeaderComponent from './components/HeaderComponent.js'
-import BodyComponent from './components/BodyComponent.js'
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 import ErrorComponent from './components/ErrorComponent.js'
 import AboutUs from './components/AboutUs.js'
 import MemberData from './components/MemberData.js'
-import ProfileComponent from './Components/ProfileComponent.js'
+import ProfileComponent from './components/ProfileComponent.js'
+import NestedProfileComponent from './components/NestedProfileComponent.js'
+import FilterComponent from './components/FilterComponent.js'
+const BodyComponent=lazy(()=>import("./components/BodyComponent.js"))
+import "./style.css";
 
 const App = () => {
 
@@ -31,18 +34,36 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/search",
-                element: <BodyComponent />,
+              
+                element: <Suspense fallback={<h1>Loading...</h1>}><BodyComponent /></Suspense>,
+              
+              /*    children:[
+                    {
+                        path:"filter",
+                        element:<FilterComponent />
+                    }
+                ]  */
 
             },
+             {
+              path:"/filter",
+              element:<FilterComponent />
+            }, 
             {
                 path: "/about-us",
                 element: <AboutUs />,
-                children:[
+                children: [
                     {
-                        path:"profile",
-                        element:<ProfileComponent  name="Rasika from NRB"/>
+                        path: "profile",
+                        element: <ProfileComponent name="Rasika from NRB" />,
+                        children: [
+                            {
+                                path: "nested-profile",
+                                element: <NestedProfileComponent />
+                            }
+                        ]
                     }
-                 
+
                 ]
 
             },
