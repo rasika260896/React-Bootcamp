@@ -15,7 +15,6 @@ class ProfileComponent extends Component{
     console.log("Profile -ComponentDidMount");
     const data = await fetch('https://api.github.com/users/rasika260896');
     const json = await data.json();
-    console.log(json);
     //to set the data from api;
     this.setState({userInfo:json});
 

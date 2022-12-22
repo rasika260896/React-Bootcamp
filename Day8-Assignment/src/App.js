@@ -1,4 +1,4 @@
-import React, { lazy,Suspense } from 'react'
+import React, { lazy,Suspense,useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import HeaderComponent from './components/HeaderComponent.js'
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
@@ -9,16 +9,20 @@ import ProfileComponent from './components/ProfileComponent.js'
 import NestedProfileComponent from './components/NestedProfileComponent.js'
 import FilterComponent from './components/FilterComponent.js'
 const BodyComponent=lazy(()=>import("./components/BodyComponent.js"))
+import ThemeContext from './components/ThemeContext.js'
 import "./style.css";
 
+
 const App = () => {
+const [theme, setTheme] = useState("light");
 
     return (
-        <>
+        <ThemeContext.Provider value = {{theme:theme,setTheme:setTheme}}>
             <HeaderComponent />
             <Outlet />
-        </>
+       </ThemeContext.Provider>
     )
+
 }
 
 const appRouter = createBrowserRouter([

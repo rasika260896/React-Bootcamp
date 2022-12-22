@@ -7,10 +7,10 @@ form {
     justify-content: center;
 }
 
-a {
+ #header a {
     text-decoration: none;
-    color: black;
-}
+    color: #9d9393;
+} 
 
 #class-container {
     display: flex;
@@ -30,18 +30,12 @@ a {
     width: -webkit-fill-available;
 }
 
-#header,
-#header a {
-    color: #fff
-}
-
 #header h1 {
     margin: 0px;
     padding: 10px;
 }
 
 #header {
-    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,3 +62,8 @@ a {
 .nav-links {
     display: flex
 }
+
+#btn-context{height: 30px;
+    border-radius: 5px;
+    margin-top: 18px;
+    border-color: transparent;}

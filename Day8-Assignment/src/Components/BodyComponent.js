@@ -1,12 +1,13 @@
-import React, {useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState,useEffect, useContext} from 'react';
 import CardContainer from './CardContainer';
 import SearchBar from './SearchBar';
+import ThemeContext  from './ThemeContext';
 
 const BodyComponent = () =>{
         //data is empty initially and as useEffect is applied we get the data and it is set to setUser.
        const [user,setUser] = useState([]);  
        const [filteredUser,setFilteredUser] = useState([]);
+       const {theme} = useContext(ThemeContext); 
        const userList=[
            "rasika260896",
            "shreyagoyal30", 
@@ -31,7 +32,7 @@ const BodyComponent = () =>{
                setUser(response);      
        }
        return(
-           <div>
+           <div style={{backgroundColor : theme === "light" ? "#fff" : "#000"}}>
            <SearchBar user={user} setFilteredUser={setFilteredUser}/>
            <div id="class-container">
            <CardContainer filteredUser={filteredUser.length ? filteredUser : user }/>

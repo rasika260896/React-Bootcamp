@@ -5,7 +5,7 @@ const CardContainer = ({ filteredUser }) => {
   if (!filteredUser.length) return <NoResultComponent />
   else {
     return filteredUser.map((item) => (  
-        <CardComponent item={item} />
+        <CardComponent item={item} key={item}/>
     ))
   }
 
