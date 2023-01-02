@@ -10,7 +10,7 @@ const HeaderComponent = () =>{
         <div className ="nav-links">
         <p><Link to ='/'> Home </Link></p>
         <p><Link to="/about-us">About Us</Link></p> 
-        <p><Link to ='/search'>Search</Link></p>
+        <p><Link to ='/search'>Search..</Link></p>
         <p><Link to ='/filter'>Filter</Link></p>
         <button id="btn-context" onClick={()=>setTheme(theme ==="dark"? "light" : "dark")}>Theme</button>
         </div>
