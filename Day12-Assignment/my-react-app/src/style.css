@@ -1,0 +1,69 @@
+body {
+    margin: 0px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+ #header a {
+    text-decoration: none;
+    color: #9d9393;
+} 
+
+#class-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#card {
+    width: 25%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin: 20px;
+
+}
+
+#card img {
+    width: -webkit-fill-available;
+}
+
+#header h1 {
+    margin: 0px;
+    padding: 10px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    font-family: monospace;
+}
+
+#search-bar {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#header p {
+    font-size: 20px;
+    padding: 0px 20px
+}
+
+#about-us {
+    padding: 10px
+}
+
+.nav-links {
+    display: flex
+}
+
+#btn-context{height: 30px;
+    border-radius: 5px;
+    margin-top: 18px;
+    border-color: transparent;}
