@@ -7,6 +7,7 @@ import MemberData from '../Components/MemberData.js'
 import ProfileComponent from '../Components/ProfileComponent.js'
 import NestedProfileComponent from '../Components/NestedProfileComponent.js'
 import FilterComponent from '../Components/FilterComponent.js'
+import LoginComponent from '../Components/LoginComponent.js'
 const BodyComponent=lazy(()=>import("../Components/BodyComponent.js"))
 
 export const appRouter = createBrowserRouter([
@@ -31,6 +32,10 @@ export const appRouter = createBrowserRouter([
               path:"/filter",
               element:<FilterComponent />
             }, 
+            {
+                path:"/login",
+                element:<LoginComponent />
+              }, 
             {
                 path: "/about-us",
                 element: <AboutUs />,

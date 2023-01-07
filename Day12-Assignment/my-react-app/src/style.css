@@ -2,7 +2,7 @@ body {
     margin: 0px;
 }
 
-form {
+#search form {
     display: flex;
     justify-content: center;
 }
