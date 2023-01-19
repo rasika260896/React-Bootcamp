@@ -18,7 +18,7 @@ const HeaderComponent = () => {
     const { theme, setTheme } = useContext(ThemeContext);
     return (
         <div id="header" style={{ backgroundColor: theme === "light" ? "#000" : "#fff", color: theme === "light" ? "#fff" : "#000" }}>
-            <h1>Insurgents</h1>
+            <h1 data-testid="logo">Insurgents</h1>
             <div className="nav-links">
                 <p><Link to="/about-us">About Us</Link></p>
                 <p><Link to='/search'>Search</Link></p>
